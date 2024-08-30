@@ -1,0 +1,27 @@
+.mobile-container {
+
+
+    max-width: 380px;
+    margin: 0 auto;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    align-items: center;
+    background-color: #D5CEF5;
+}
+
+@media screen and (min-width: 600px) {
+
+
+    .mobile-container {
+
+        padding: 20px;
+        font-size: 1.2rem;
+        align-items: center;
+    }
+}
+
+#dropdown1 {
+    width: 220px;
+
+}

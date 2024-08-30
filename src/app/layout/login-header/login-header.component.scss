@@ -1,0 +1,91 @@
+
+.login-app-container{
+    display: none;
+   
+}
+@media (min-width: 412px) and (max-width:892px){
+    .login-app-container{
+        display: block;
+        
+    }
+    .img-path{
+        position: absolute;
+        z-index: -1;
+        top: 80px;
+        left: 25px;
+    }
+    .img-money{
+        position: absolute;
+        top: 55px;
+        right: 0;
+        width: 25%;
+    }
+    .img-bank{
+        position: absolute;
+        top: 50px;
+        left: 10px;
+        width: 30%;
+    }
+    .img-note{
+        position: absolute;
+        top: 300px;
+        width: 20%;
+        left: 90px;
+    }
+    .img-line{
+        position: absolute;
+        top: 56px;
+        left: 123px;
+        width: 47%;
+    }
+}
+
+
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    }
+  
+  .login-button{
+  
+    background-color: rgba(104, 78, 220, 1);
+  
+    border-radius: 20px;
+  
+    border: none;
+  
+    height: 38px;
+  
+    width: 323px;
+
+    margin-top:200px;
+    margin-left: 40px;
+
+        a{
+            color: white;
+            text-decoration: none;
+        } 
+
+
+  
+  }
+  
+  .signup-button{
+    margin-left: 40px;
+    background-color:rgba(176, 176, 176, 1);
+  
+    color:white;
+  
+    border: none;
+  
+    height: 38px;
+  
+    width: 323px;
+  
+    border-radius:20px;
+  
+    margin-top:29px;
+  
+  }

@@ -1,0 +1,22 @@
+<div class="mobile-container">
+    <div class="container0">
+        <img src="./assets/images/path.png" alt="" class="img0">
+        <img src="./assets/images/Rectangle.png" alt="" class="img1">
+        <img src="./assets/images/bank.png" alt="" class="img3">
+        <img src="./assets/images/hand.png" alt="" class="img4">
+    </div>
+    <h3>Final Steps!</h3><br>
+    <p style="color:#483699 ;">Current goals recommended for you. <br> Tap on 5 goals to proceed ahead</p>
+    <div class="container">
+        <div id="ck-button" *ngFor="let goals of goalModel">
+            <label>
+                <input type="checkbox" name="{{goals.goalName}}" [(ngModel)]="goals.isSelected"
+                    [disabled]="countSelectedGoals() >= maxButtons && !goals.isSelected"><span>{{goals.goalName}}</span>
+            </label>
+        </div>
+    </div>
+    <div class="container2">
+        <button class="skipbutton">Skip</button>
+        <button class="accountbutton" type="submit" (click)="addGoalsWithUserId()">Create Account</button>
+    </div>
+</div>

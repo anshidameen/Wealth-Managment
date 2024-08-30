@@ -1,0 +1,37 @@
+<div class="mobile-container">
+    <div class="container">
+        <div class="row">
+            <img class="img" src="../../../assets/images/Main.png" />
+            <!-- <img class="img" [src]="getImageSource()" alt="Goal Image" /> -->
+        </div>
+        <!-- <div class="row">
+        <p>Apartment</p>         
+        </div> -->
+        <!-- <div *ngFor="let goal of selectgoal">
+            <ng-container *ngIf="goal.goalId">
+            {{goal.goalName}}
+            </ng-container>
+        </div>
+         -->
+        <!-- <div>Current Goal Index: {{ currentgoalindex }}</div>
+        <div>Current Goal: {{ currentgoal | json }}</div> -->
+        <div *ngIf="currentgoal" style="margin-top: 60px;font-size: 40px;font-weight: b;">
+            {{ currentgoal.goalName }}
+        </div>
+        <div class="row1" id="new">
+            <p>Duration</p>
+        </div>
+        <div>
+            <input class="one" type="date" [(ngModel)]="duration" style="border-color:#684EDC">
+        </div>
+        <div class="row2">
+            <p>Financial goal value</p>
+        </div>
+        <div>
+            <input class="three" type="number" [(ngModel)]="financialGoalValue" placeholder="5000000">
+        </div>
+        <button type="button" class="btn" (click)="save()">Save</button>
+        <!-- <button class="accountbutton" type="submit" (click)="addGoalsWithUserId()" routerLink="/goalonboarding">Create Account</button> -->
+
+    </div>
+</div>

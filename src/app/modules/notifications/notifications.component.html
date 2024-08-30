@@ -1,0 +1,41 @@
+
+<body>
+    <div class="top">
+        <div class="header">
+            <div class="profile">
+                <img src ="/assets/images/profile.png" alt ="profile pic" style="float:right; margin-left: 10px;">
+                <img routerLink="/notifications" src ="/assets/images/notificationbell.png" alt ="profile pic" style="float:right">
+            </div>
+            <h3>Hello {{name}}</h3>    
+        </div>
+        <span style="color: #483699; font-size:xx-small;"> Add funds to enjoy the best possibilites on this app</span>
+    </div>
+    <hr>
+    <div class="notifications">
+    <h3><strong>Notifications </strong></h3>
+    <div *ngIf="notifications && notifications.length > 0; else noNotifications">
+    <div class="cards" *ngFor="let notification of notifications" >
+        <div class ="row">
+            <div class = "card-body">
+            <span class="text">{{notification.goalName}}</span>
+            <span class="right-content">{{notification.timeline}}</span>
+            </div>
+        </div>
+    </div>
+    </div>
+    <ng-template #noNotifications>
+        <div class="no-notifications">
+          <p>No notifications available</p>
+        </div>
+      </ng-template>
+
+    <div class="card-toggle">
+        <div class="card-content">
+            <img routerLink="/dashboard" src="assets/images/dashboardhome.png">
+    
+            <img routerLink="/portfolio" src="assets/images/dashboardgraph.png">
+            <img src="assets/images/dashboardtarget.png">
+        </div>
+    </div>
+    </div>
+</body>

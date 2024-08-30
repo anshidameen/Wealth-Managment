@@ -1,0 +1,49 @@
+<div class="signup-container">
+    <img src="/assets/images/tmpuJA9Yl.png" alt="" class="img-circles">
+    <img src="/assets/images/Rectangle 148652.png" alt="" class="img-rectangle">
+    <img src="/assets/images/tmpDyZwTL.png" alt="" class="img-toggle">
+    <div class="overlay-text">
+        <h1>Hi {{name}}!</h1><br>
+        <p>Enter the below details to ease your</p><br>
+        <p>onboarding experience</p>
+    </div>
+    <img src="/assets/images/Path 87146.png" alt="" class="img-wave">
+</div>
+
+
+<div class="container">
+
+    <div class="stepper">
+        <div *ngFor="let step of steps; let i = index" class="step"
+            [ngClass]="{'active': i === currentStep, 'completed': i < currentStep}">
+            {{ step }}
+        </div>
+        <div class="line"></div>
+        <div class="line2"></div>
+    </div>
+
+    <div class="form-details">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <label for="email">Email ID</label><br>
+            <input type="email" id="email" name="email" formControlName="email"><br><br><br>
+            <div class="error" *ngIf="emailIsRequiredError()">Email is required.</div>
+            <div class="error" *ngIf="emailIsInvalidError()">Invalid email address.</div>
+
+            <label for="password">Set a Password</label><br>
+            <input type="password" id="password" name="password" formControlName="password"><br><br><br>
+            <div class="error" *ngIf="passwordIsRequiredError()">Password is required.</div>
+            <div class="error" *ngIf="passwordIsMinLengthError()">Password must be at least 8 characters long.</div>
+
+            <label for="userSSN">SSN?</label><br>
+            <input type="text" id="userSSN" name="userSSN" formControlName="userSSN"><br><br><br>
+            <div class="error" *ngIf="ssnIsRequiredError()">SSN is required.</div>
+            <div class="error" *ngIf="ssnIsPatternError()">SSN must be a 12-digit number.</div><br>
+
+
+            <button type="submit" [disabled]="!form.valid" (click)="onSubmit()">Submit</button>
+        </form>
+    </div>
+
+
+
+</div>

@@ -1,0 +1,164 @@
+/* mobile-view.component.css */
+.mobile-container {
+
+    // background-color: #f2f2f2;
+    max-width: 380px;
+    margin: 0 auto;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+
+    /* Styles for screens wider than 768px (not mobile) */
+    .mobile-container {
+
+        padding: 20px;
+        font-size: 1.2rem;
+        align-items: center;
+    }
+}
+
+.forward {
+
+    border: none;
+    background-color: white;
+}
+
+#backwardbutton {
+    padding-left: 40px;
+}
+
+.pclass {
+    padding-left: 20px;
+}
+
+
+.container {
+    align-items: center;
+}
+
+.row {
+    padding-top: 5px;
+
+}
+
+.card {
+    margin-bottom: 10px;
+}
+
+.text {
+    color: white;
+}
+
+.card-body {
+    border-radius: 6px;
+    display: fixed;
+    padding: 10px;
+}
+
+.datetext {
+    text-align: right;
+
+}
+
+.images {
+    padding-top: 6px;
+    height: 100px;
+    width: 100px;
+    border-radius: 16px;
+}
+
+.triptext {
+    font-size: 16px;
+}
+
+.svg {
+    margin-left: 40px;
+    padding-left: 15px;
+}
+
+.allbutton {
+    margin-left: 226px;
+    padding-left: 10px;
+    border: none;
+    background-color: rgb(252, 251, 251);
+    color: #684EDC;
+}
+
+.button-word-button {
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+}
+
+.button-word-button button {
+    margin-right: 10px;
+    border: none;
+    background: none;
+    padding-bottom: 20px;
+    /* Add spacing between buttons and word */
+}
+
+.wrapper {
+    max-height: 120px;
+    border: 1px solid none;
+    display: flex;
+    overflow-x: auto;
+}
+
+.wrapper::-webkit-scrollbar {
+    width: 0px;
+}
+
+.wrapper .item {
+    margin: 10px;
+
+    min-width: 110px;
+    height: 110px;
+    line-height: 80px;
+    text-align: center;
+    background-color: none;
+
+}
+
+// .wrapper .item img {
+//     height: 10px;
+// }
+
+.wrapper .item p {
+    line-height: 2px;
+    text-align: center;
+    background-color: none;
+    font-size: 15px;
+}
+
+.blue-card {
+    background-color: blue;
+}
+
+.red-card {
+    background-color: red;
+}
+.card-content {
+    display: flex;
+    flex-direction: row;
+}
+ 
+.card-toggle img {
+    margin: 15px; 
+}
+.card-toggle{
+    margin-left: 130px;
+    position: fixed;
+    bottom: 50px;
+    height: 60px;
+    width: 150px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    background-color: white;
+}

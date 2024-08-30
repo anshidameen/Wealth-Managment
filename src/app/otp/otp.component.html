@@ -1,0 +1,31 @@
+    <div>
+      
+    <h1>OTP Verification</h1>
+    
+     <p *ngIf="generatedOTP">OTP: {{ generatedOTP }}</p> 
+     <form (ngSubmit)="verifyOtp()" #otpForm="ngForm"> 
+      
+      <label>Enter Code</label>
+      <div class="otp-input-container">
+        <input type="text" class="otp-input" [(ngModel)]="digit1" name="digit1" maxlength="1" required id="digit1" #digit1Input (input)="focusNextInput(1)">
+        <input  type="text" class="otp-input" [(ngModel)]="digit2" name="digit2" maxlength="1" required id="digit2" #digit2Input (input)="focusNextInput(2)">
+        <input  type="text" class="otp-input" [(ngModel)]="digit3" name="digit3" maxlength="1" required id="digit3" #digit3Input (input)="focusNextInput(3)">
+        <input  type="text" class="otp-input" [(ngModel)]="digit4" name="digit4" maxlength="1" required id="digit4" #digit4Input (input)="focusNextInput(4)"><br>
+       
+       
+       <div class="validation1">
+       <br><br>
+        <div *ngIf="showMessage && errorMessage"> 
+           <span style="color: red;">{{ errorMessage }}</span>
+        </div>
+   </div>
+           
+  <button type="button" class="proceed-button" [disabled]="otpForm.invalid" (click)="verifyOtp()">Proceed</button>
+ 
+</div>
+</form>
+<!-- <div>{{generatedOTP}}</div> -->
+ 
+</div>
+
+

@@ -1,0 +1,67 @@
+.top{
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.header{
+    padding-left: 19px;
+    padding-top: 73px;
+    padding-right: 19px;
+    width:412px;
+}
+span{
+    padding-left: 20px;
+    padding-top: 0px;
+    
+}
+.notifications{
+    width:412px ;
+    padding-left: 19px;
+}
+
+body{
+   // background-color: #F3EEFE;
+    //background-image: linear-gradient(#F3EEFE, #C391EE);
+    width: 412px;
+    height: 1000px;
+}
+.cards{
+    padding: 5px;
+    background-color: white;
+    padding-left:10px;
+    max-width: 412px;
+    
+}
+.row{
+    padding: 8px;
+    max-width: 412px;
+    border-radius: 5px;
+    box-shadow: black;
+    border-style:ridge;
+}
+.right-content {
+    float: right; /* Float the span to the right */
+    /* Optionally, you can add more styling for the right content */
+  }
+  .card-toggle{
+    margin-left: 130px;
+    position: fixed;
+    bottom: 50px;
+    height: 60px;
+    width: 150px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+   // background-color: white;
+}
+
+ 
+.card-content {
+    display: flex;
+    flex-direction: row;
+}
+ 
+.card-toggle img {
+    margin: 10px; 
+}

@@ -1,0 +1,146 @@
+<div class="mobile-container">
+    <div class="container">
+        <div class="row">
+            <div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+
+                <div class="button-word-button">
+                    <button (click)="backwardButton()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                            <path
+                                d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+                        </svg>
+                    </button>
+                    <p *ngIf="currentHeading === 1">Short term goal</p>
+                    <p *ngIf="currentHeading === 2">Midterm goal</p>
+                    <p *ngIf="currentHeading === 3">Longterm goal</p>
+
+                    <button (click)=" forwardButton()" style="float: right;"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 20rem;" id="card1">
+                    <div class="card-body" style="background-color: #483699;">
+                        <div class="text">
+                            <span>56% Cost</span><br>
+                            <span style="color: #2CFF41;">Increase in Average</span>
+                            <br>
+                            <br>
+                            <br>
+                            <span class="datetext">date</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <h5 *ngIf="currentHeading === 1">Short term goal</h5>
+                <h5 *ngIf="currentHeading === 2">Midterm goal</h5>
+                <h5 *ngIf="currentHeading === 3">Longterm goal</h5>
+            </div>
+            <div class="col-4">
+                <span class="svg"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                        viewBox="0 0 50 50" style="fill:#483699;">
+                        <path
+                            d="M25,2C12.317,2,2,12.317,2,25s10.317,23,23,23s23-10.317,23-23S37.683,2,25,2z M37,26H26v11h-2V26H13v-2h11V13h2v11h11V26z">
+                        </path>
+                    </svg></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 20rem;" id="card1" [ngStyle]="{ 'background-color': currentColor }" *ngFor="let goal of goals">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <img [src]="getImagePath(goal.goalName)" alt="" class="images">
+                            </div>
+                            <div class="col">
+                                <span class="triptext">{{goal.goalName}}</span><br>
+                                <span class="triptext">{{goal.duration | date:'yyyy' }}</span><br>
+                                <span class="triptext">$0</span>&nbsp;
+                                <span class="triptext">${{goal.financialGoalValue}}</span><br>
+                                <div class="progress" style="height: 5px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="0"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="viewbutton">
+                <button class="allbutton">View All</button>
+            </div>
+        </div>
+        <div class="row">
+            <h4>Recommended</h4>
+        </div>
+        <div class="row">
+            <div class="wrapper">
+                <div class="item">
+                    <img src="./assets/images/marrige.png">
+                    <p style="padding: none;">marriage </p>
+
+                </div>
+                <div class="item">
+                    <img src="./assets/images/honeymoon.png" alt="">
+                    <p>honeymoon</p>
+                </div>
+                <div class="item">
+                    <img src="./assets/images/kids.png" alt="">
+                    <p>kids</p>
+                </div>
+                <div class="item">
+                    <img src="./assets/images/vaccation.png" alt="">
+                    <p>vaccation</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h4>Categories</h4>
+        </div>
+        <div class="row">
+            <div class="wrapper">
+                <div class="item">
+                    <img src="./assets/images/family.png">
+                    <p style="padding: none;">family </p>
+                </div>
+                <div class="item">
+                    <img src="./assets/images/gadgets.png">
+                    <p style="padding: none;">gadgets </p>
+                </div>
+                <div class="item">
+                    <img src="./assets/images/medical.png">
+                    <p style="padding: none;">medical </p>
+                </div>
+                <div class="item">
+                    <img src="./assets/images/travel.png">
+                    <p style="padding: none;">travel </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card-toggle">
+    <div class="card-content">
+        <img routerLink="/dashboard" src="assets/images/inactivehome.png">
+         <img routerLink="/portfolio" src="assets/images/inactivegraph.png">
+        <img src="assets/images/activetarget.png">
+    </div>
+</div>

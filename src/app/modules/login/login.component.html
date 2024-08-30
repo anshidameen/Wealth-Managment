@@ -1,0 +1,37 @@
+<div class="login-app-container">
+    <img src="../../../assets/images/person.png" />
+    <img src="../../../assets/images/bank.png" class="img-bank"/>
+    <img src="../../../assets/images/money.png" class="img-money"/>
+    <img src="../../../assets/images/note.png" class="img-note"/>
+    <img src="../../../assets/images/path.svg" class="img-path"/>
+    <img src="../../../assets/images/line.svg" class="img-line" />
+ </div>
+<form #login="ngForm" (ngSubmit)="userLogin(login.value)">
+    <h1>Log-in</h1>
+    <div class =" form-control">
+        <div class= "form-control-details">
+        <label  for="email">Email ID </label><br>
+    </div>
+        <input id = "email" autocomplete = "new-password"  type ="email" [(ngModel)]="user.email" name="email" required>
+    </div>
+    <div class =" form-control">
+        <div class= "form-control-details">
+        <label for="password">Password</label><br></div>
+        <input id = "password" autocomplete = "new-password" type ="password" [(ngModel)]="user.password" name="password" required>
+    </div>
+    <div class="form-control">
+        <a [routerLink]="['/forgotPassword']" routerLinkActive="router-link-active" >Forgot password ?</a>
+        </div>
+        <br>
+        <div class =" form-control-button">
+    <button class="button" type="submit">Login</button>
+    </div>
+    <div class="form-control1">
+        <div class="form-signup">
+        Don't have an account? 
+        <a [routerLink]="['/signup']" routerLinkActive="router-link-active" >Sign-up</a>
+        </div>
+    </div>
+    </form>
+
+    

@@ -1,0 +1,23 @@
+<div class="mobile-container">
+    <form [formGroup]="fundForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <label for="dropdown1">Transaction Type:</label>
+            <select formControlName="dropdown1">
+                <option value="Deposit">Deposit</option>
+                <option value="Withdrawal">Withdrawal</option>
+            </select>
+        </div>
+        <div class="row">
+            <label for="dropdown2">Fund Type:</label>
+            <select formControlName="dropdown2" (change)="onFundSelection($event)">
+                <option [value]="fund.fundName" *ngFor="let fund of dropDownValue">{{ fund.fundName }}</option>
+            </select>
+        </div>
+        <div class="row">
+            <label for="numberInput">Number Input:</label>
+            <input type="number" id="numberInput" formControlName="numberInput">
+        </div>
+        <button type="submit" [disabled]="fundForm.invalid">Submit</button>
+    </form>
+
+</div>

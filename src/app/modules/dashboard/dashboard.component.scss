@@ -1,0 +1,147 @@
+.header{
+    padding-left: 19px;
+    padding-top: 73px;
+    padding-right: 19px;
+    width:412px;
+}
+span{
+    padding-left: 20px;
+    padding-top: 0px;
+    
+}
+.top{
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+th{
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+.container{
+    padding-left: 16px;
+    width: 412px;
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns : auto auto auto;
+    column-gap: 15px;
+    padding-right: 16px;
+    
+}
+.grid-item1{
+    background-color: #A291EE;
+    border-radius: 10px;
+    height: 109px;
+    width: 109px;
+}
+.grid-item2{
+    background-color: #DBEE91;
+    border-radius: 10px;
+    height: 109px;
+    width: 109px;
+}
+.grid-item3{
+    background-color: #91EED2;
+    border-radius: 10px;
+    height: 109px;
+    width: 109px;
+    
+}
+
+/*.chart{
+    background-color: #C391EE;
+    border-radius: 10px;
+    width: 412px;
+}
+.chart1{
+    padding-left: 10px;
+    padding-right: 19px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+*/
+.note-image{
+    position: absolute;
+    padding-left: 5px;
+    padding-top: 0px;
+}
+.note-image2{
+    position: absolute;
+    padding-top: 0px;
+    
+}
+
+.img-note{
+    max-height: 70px;
+}
+.img-note2{
+    max-height: 113px;
+}
+.note-image2 img{
+    width: 90px;
+    height: 90px;
+}
+.globe{
+    width: 100px;
+    height: 100px;
+   
+}
+
+body{
+    background-color: #F3EEFE;
+    background-image: linear-gradient(#F3EEFE, #C391EE);
+    width: 412px;
+}
+.card{
+    max-width: 400px;
+    padding: 5px;
+   margin-bottom: 10px;
+}
+.row{
+    padding:5px;
+    padding-left: 10px;
+    width: 400px;
+}
+.row1{
+    background-color: #c6bbf3;
+    padding:10px;
+    
+}
+.triptext {
+    font-size: 16px;
+}
+.card-toggle{
+    margin-left: 130px;
+    position: fixed;
+    bottom: 50px;
+    height: 60px;
+    width: 150px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+   background-color: white;
+}
+
+ 
+.card-content {
+    display: flex;
+    flex-direction: row;
+}
+ 
+.card-toggle img {
+    margin: 10px; 
+}
+.col{
+    padding-right: 20px;
+   //padding-left: 20px;
+}
+
+ 
+ 
+
+ 

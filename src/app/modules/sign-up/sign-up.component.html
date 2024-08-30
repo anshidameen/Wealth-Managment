@@ -1,0 +1,39 @@
+<div class="login-app-container">
+    <img src="../../../assets/images/person.png" class="img-person" />
+    <img src="../../../assets/images/bank.png" class="img-bank" />
+    <img src="../../../assets/images/money.png" class="img-money" />
+    <img src="../../../assets/images/note.png" class="img-note" />
+    <img src="../../../assets/images/path.svg" class="img-path" />
+    <img src="../../../assets/images/line.svg" class="img-line" />
+
+
+    <div class="container">
+
+        <div class="stepper">
+            <div *ngFor="let step of steps; let i = index" class="step"
+                [ngClass]="{'active': i === currentStep, 'completed': i < currentStep}">
+                {{ step }}
+            </div>
+            <div class="line"></div>
+        </div>
+        <h2>Welcome to FinGrow,</h2> <br>
+        <p class="p">Let's get to know each other!</p> <br><br><br>
+        <form [formGroup]="yourForm">
+            <label style="color: #483699;">What's your name?</label><br>
+            <input type="name" id="username" formControlName="username" auto-complete="" placeholder=""
+                style="border: none; border-bottom: 1px solid black; color: #483699;" required />
+            <div *ngIf="yourForm?.get('username')?.touched && yourForm?.get('username')?.hasError('required')"
+                style="color: red;font-size: 40px;margin-top: 20px;margin-left: 10px;">
+                Name is required.
+            </div>
+            <div> <br><br><br>
+                <button mat-button type="button" (click)="redirectToSignup2()" [disabled]="yourForm.invalid">Getting
+                    Started</button>
+                <app-signup2 *ngIf="showSignup"></app-signup2>
+
+
+            </div>
+        </form>
+    </div>
+
+</div>

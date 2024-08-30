@@ -1,0 +1,89 @@
+.login-app-container{
+    display: none;
+   
+}
+@media (min-width: 412px) and (max-width:892px){
+    .login-app-container{
+        display: block;
+        
+    }
+    .img-path{
+        position: absolute;
+        z-index: -1;
+        top: 80px;
+        left: 25px;
+    }
+    .img-money{
+        position: absolute;
+        top: 55px;
+        right: 0;
+        width: 25%;
+    }
+    .img-bank{
+        position: absolute;
+        top: 50px;
+        left: 10px;
+        width: 30%;
+    }
+    .img-note{
+        position: absolute;
+        top: 300px;
+        width: 20%;
+        left: 90px;
+    }
+    .img-line{
+        position: absolute;
+        top: 56px;
+        left: 123px;
+        width: 47%;
+    }
+}
+.form-control{
+    margin-bottom: 15px;
+    a{
+        color: rgba(72, 54, 153, 1);
+        text-decoration: none;
+    }
+    border: white;
+}
+.form-control1{
+    margin-top: 50px;
+    margin-bottom: 1px;
+
+}
+.form-control-button{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 45px;
+    margin-right: 45px;
+}
+.form-signup{
+    padding-left:75px;
+}
+.button{
+    width: 100%;
+   // max-height: 100px;
+   height: 38px;
+   width: 323px;
+    border-radius: 18px;
+    background-color: #684EDC;
+    color: white;
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    
+}
+.form-control-details{
+    color: rgba(72, 54, 153, 1);
+}
+
+input{
+    border: none;
+   
+    border-bottom: 1px solid rgba(102, 102, 102, 1);
+}
+h1{
+    color: rgba(80, 80, 80, 1);
+    padding-bottom: 10px;
+}
